@@ -74,11 +74,17 @@ function multiplyNums(x, y, callbak) {
 let callbak = (multiply) => {return multiply};
 console.log(multiplyNums(6,5,callbak));
 
-function contains(item, list, cb) {
+function contains(item, list, cab) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
-  if(list.includes)
+  if(list.includes(item)){
+    return cab(true);
+  }else{
+    return false;
+  }
 }
+let cab =(itemInside)=> {return itemInside};
+console.log(contains("gaga", items, cab));
 
 /* STRETCH PROBLEM */
 
