@@ -1,4 +1,5 @@
-// Create a higher order function and invoke the callback function to test your work. You have been provided an example of a problem and a solution to see how this works with our items array.  Study both the problem and the solution to figure out the rest of the problems.
+// Create a higher order function and invoke the callback function to test your work. You have been provided an example of a problem and a solution to see how this works with our items array.  
+// Study both the problem and the solution to figure out the rest of the problems.
 
 const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 
@@ -38,26 +39,45 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
   console.log(test2); // "this Pencil is worth a million dollars!"
 */
 
-
 function getLength(arr, cb) {
   // getLength passes the length of the array into the callback.
+  return cb(arr.length);
 }
+let cb = (arrLength) =>  { 
+  return arrLength
+};
+console.log(getLength(items, cb ));
 
-function last(arr, cb) {
+
+function last(arr, callB) {
   // last passes the last item of the array into the callback.
+  return callB(arr[arr.length -1])
 }
+let callB =(lastItem) => {
+  return lastItem
+};
+console.log(last(items,callB));
 
-function sumNums(x, y, cb) {
+
+function sumNums(x,y, callbk) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
+  return callbk (x + y);
 }
+let callbk = (suma)=> {return suma};
+console.log(sumNums (5,2, callbk))
 
-function multiplyNums(x, y, cb) {
+
+function multiplyNums(x, y, callbak) {
   // multiplyNums multiplies two numbers and passes the result to the callback.
+  return callbak (x * y);
 }
+let callbak = (multiply) => {return multiply};
+console.log(multiplyNums(6,5,callbak));
 
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
+  if(list.includes)
 }
 
 /* STRETCH PROBLEM */
