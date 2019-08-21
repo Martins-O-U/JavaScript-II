@@ -11,8 +11,8 @@ function makeAdder(x) {
   return Add;
 }
 
-var add5 = makeAdder(6);
-console.log(add5(4));  // 7
+var addTo = makeAdder(6);
+console.log(addTo(4));  // 7
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
@@ -45,6 +45,25 @@ console.log(myCounter());
 // ==== Challenge 3: Make `counterMaker` more sophisticated ====
 // It should have a `limit` parameter. Any counters we make with `counterMaker`
 // will refuse to go over the limit, and start back at 1.
+const counterMakers = () => {
+  let count = 0;
+  let counter = function(){
+    if (count < 3){
+      return count = count + 1;
+    }else {
+      return `count reached maximun number of 3`;
+    }
+  }
+  return counter;
+};
+const myCounters = counterMakers();
+console.log(myCounters());
+console.log(myCounters());
+console.log(myCounters());
+console.log(myCounters());
+console.log(myCounters());
+console.log(myCounters());
+
 
 // ==== Challenge 4: Create a counter function with an object that can increment and decrement ====
 const counterFactory = () => {

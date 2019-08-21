@@ -102,7 +102,31 @@ console.log(ticketPriceTotal);
 // Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
 // Problem 1
+// Director wants to give gifts to those who donated 200 and above, create a method to identify and group those of this category
+let above150 =[];
+let higherAmt = function (mapped){
+  return mapped.donation >= 200;
+}
+above150 = runners.filter(higherAmt)
+console.log(above150);
+
 
 // Problem 2
+//The event director noticed some of the runners are students, as a result of most of the emails having the .edu domain
+//Help him create a separate list so they can be issued free gifts later
+let students=[];
+function student(mail){
+  return mail.email.indexOf('edu') > -1;
+}
+students = runners.filter(student);
+console.log(students);
+
 
 // Problem 3
+//The event director decided that the company names be arranged aphabetically, create a method that help ease this process
+let sortedName = [];
+function compName(sortName){
+  return sortName.company_name;
+}
+sortedName = runners.map(compName).sort();
+console.log(sortedName);
